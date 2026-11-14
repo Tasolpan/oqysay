@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="kk"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#133f35">
+<title>оқыSAY — Кітапты онлайн оқу</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="reading.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0"></script>
+<script defer src="cloud-config.js"></script>
+<script defer src="reading.js"></script>
+</head><body>
+<header class="bar">
+  <div class="barinner">
+    <a class="brand" href="index.html"><span class="brandmark">о✦</span><span><b>оқы<span>SAY</span></b><small>КІТАП ОҚИТЫН ҰЛТ</small></span></a>
+    <nav class="quicknav" aria-label="Сайт бөлімдері"><a href="index.html">Басты бет</a><a href="cloud.html">Жеке кабинет</a><a class="current" href="reading.html">📖 Кітап оқу</a></nav>
+    <div class="user" id="loginStatus">Қосылып жатыр…</div>
+  </div>
+</header>
+<main class="wrap">
+ <section class="hero">
+   <div class="heroinfo">
+    <span class="eyebrow">«КІТАП ОҚИТЫН ҰЛТ» • 2026–2027</span>
+    <h1>Кітапты аш.<br><em>Жаңа әлемді таны!</em></h1>
+    <p>6–10-сыныптардың бекітілген оқу тізімі. Кітапты таңда, толық PDF нұсқасы қосылса — осы бетте оқы.</p>
+    <div class="herobadges"><span>📚 75 оқу жазбасы</span><span>🎒 5 сынып деңгейі</span><span>🔒 Жеке оқу нәтижесі</span></div>
+   </div>
+   <div class="heroart" aria-hidden="true"><div class="book b1">ОҚЫ</div><div class="book b2">SAY</div><div class="book b3">✦</div><span class="twinkle">✧</span></div>
+ </section>
+ <section class="toolbarbox">
+  <div class="toolbarhead"><div><span class="eyebrow">ОҚУ БАҒДАРЛАМАСЫ</span><h2>Сыныбыңның кітаптары</h2></div><div class="counter" id="counter">Тізім жүктелуде…</div></div>
+  <div class="gradebar" id="gradebar" aria-label="Сыныпты таңдау"><button data-grade="6" class="active">6-сынып</button><button data-grade="7">7-сынып</button><button data-grade="8">8-сынып</button><button data-grade="9">9-сынып</button><button data-grade="10">10-сынып</button><button data-grade="all">Барлығы</button></div>
+  <label class="search"><span>⌕</span><input type="search" id="search" autocomplete="off" placeholder="Кітаптың атауы немесе авторы бойынша іздеу…" aria-label="Кітап іздеу"></label>
+  <div class="legend"><span><i class="dot ready"></i>PDF оқу мүмкіндігі бар</span><span><i class="dot pending"></i>PDF әлі жүктелмеген</span></div>
+ </section>
+ <section id="notice" class="notice" hidden></section>
+ <section class="bookgrid" id="bookgrid"><div class="loader">Кітап тізімі жүктелуде…</div></section>
+ <section class="info">
+   <div><h3>📖 Қолжетімді кітап көздері</h3><p>PDF әлі қосылмаған кітаптарды республикалық марафонның ресми навигаторы арқылы электронды кітапханалардан іздеуге болады.</p></div>
+   <a class="button pale" href="https://reading-nation.kz/book-links" target="_blank" rel="noopener noreferrer">Ресми кітап іздеу навигаторы ↗</a>
+ </section>
+</main>
+<footer class="footer"><b>оқы<span>SAY</span></b> · Оқу модулі <span>Сайттағы кітап тізімі — берілген мектеп бағдарламасы. PDF жоқ болса, файл қолжетімді деп көрсетілмейді.</span></footer>
+<div id="modal" class="modalback" hidden><div class="modalbox" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" id="close" aria-label="Жабу">×</button><div id="modalBody"></div></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
